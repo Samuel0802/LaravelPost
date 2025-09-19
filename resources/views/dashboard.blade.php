@@ -7,15 +7,37 @@
 
     <div class="py-10">
 
-        {{-- CREATE POST DO GATE --}}
-        @can('post.create')
-            <div class="max-w-7xl mx-auto mb-6 px-8">
-                <a href="{{ route('post.create') }}" class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
-                    Criar Post
-                </a>
-            </div>
-        @endcan
+        {{-- Verificar se existe post para mostrar --}}
+        @empty($posts->count())
+            <div class="max-w-7xl mx-auto mb-6 px-8 text-center">
+                <p class="text-gray-500 mb-5">Não tem Posts</p>
 
+                {{-- CREATE POST DO GATE --}}
+                @can('post.create')
+                    <div class="max-w-7xl mx-auto mb-6 px-8">
+                        <a href="{{ route('post.create') }}"
+                            class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+                            Criar Post
+                        </a>
+                    </div>
+                @endcan
+
+            </div>
+
+            @else
+
+              {{-- CREATE POST DO GATE --}}
+                @can('post.create')
+                    <div class="max-w-7xl mx-auto mb-6 px-8">
+                        <a href="{{ route('post.create') }}"
+                            class="bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">
+                            Criar Post
+                        </a>
+                    </div>
+                @endcan
+        @endempty
+
+       {{-- LISTA OS POSTS --}}
         @foreach ($posts as $post)
             <x-post-component :post="$post" />
         @endforeach

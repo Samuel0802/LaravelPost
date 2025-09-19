@@ -42,6 +42,5 @@ class MainController extends Controller
 
         return redirect()->route('dashboard');
 
-
     }
 }

@@ -8,6 +8,7 @@ Route::get('/', function () {
 
     //Verificar se user esta autenticado
     if(auth()->check()){
+        //se for true redireciona para dashboard
         return redirect()->route('dashboard');
     }else
      {
