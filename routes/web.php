@@ -20,6 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    //PAGINA DE CRIAR POSTS
+    Route::get('/posts/create', [MainController::class, 'createPost'])->name('post.create');
+    //FUNÇÃO DE EXCLUIR POSTS
+    Route::get('/posts/delete/{id}', [MainController::class, 'deletePost'])->name('post.delete');
 });
 
 require __DIR__.'/auth.php';

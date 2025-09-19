@@ -16,8 +16,15 @@
                             </div>
 
                             <div class="mt-3 ps-5">
-                               <h1 class="mt-3 ps-5">{{ $post->titulo }}</h1>
+                               <h1 class="text-xl font-bold">{{ $post->titulo }}</h1>
                                <p class="mt-3">{{ $post->conteudo }}</p>
+                            </div>
+
+                            <div class="mt-3 ps-5 text-end">
+                                 {{-- POST DELETE DO GATE --}}
+                                 @can('post.delete', $post)
+                                     <a href="{{ route('post.delete', ['id' => $post->id]) }}" class="bg-red-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded">Excluir</a>
+                                 @endcan
                             </div>
 
                         </div>

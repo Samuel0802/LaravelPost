@@ -83,7 +83,7 @@ CRUD - Create, update, Delete.
  - composer require laravel/breeze --dev
  - php artisan breeze:install
  - npm install
- - npm run dev 
+ - npm run dev  -> executar após php artisan serve
 
  * Traduzir projeto para Portugues no laravel
 
