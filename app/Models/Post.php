@@ -13,4 +13,10 @@ class Post extends Model
           'titulo',
           'conteudo'
     ];
+
+    public function user(){
+        //Relação de um para muitos
+        //Muitos Post pertence um usuário
+     return $this->belongsTo((User::class));
+    }
 }
