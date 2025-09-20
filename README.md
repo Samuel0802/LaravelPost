@@ -78,6 +78,40 @@ CRUD - Create, Delete.
 
 ### Instalações
 
+* Instalar dependências do PHP
+ - Certifique-se de ter PHP >= 8.1 (ou a versão exigida pelo projeto).
+ - Instale também Composer, que é o gerenciador de dependências do PHP.
+
+```sh
+composer install
+```
+
+* Criar arquivo .env
+ - Copie o .env.example para .env:
+
+ * Gerar a chave do aplicativo
+
+```sh
+  php artisan key:generate
+```
+
+* Rodar as migrates e Seeders
+
+```sh
+php artisan migrate:fresh --seed
+```
+
+* Depencia do Front end
+
+- npm install
+- npm run dev
+
+* iniciar o servidor
+
+```sh
+php artisan serve
+```
+
 * Instalação do Laravel Breeze
 
  - composer require laravel/breeze --dev
@@ -92,6 +126,7 @@ CRUD - Create, Delete.
  - php artisan lang:publish
  - composer require lucascudo/laravel-pt-br-localization --dev
  - php artisan vendor:publish --tag=laravel-pt-br-localization
+
 
 
 ### PAGINA DE POSTS
