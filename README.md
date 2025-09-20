@@ -127,7 +127,16 @@ php artisan serve
  - composer require lucascudo/laravel-pt-br-localization --dev
  - php artisan vendor:publish --tag=laravel-pt-br-localization
 
+### Dados da Seeders Users
 
+- Admin: admin@gmail.com
+  Senha: Admin123
+
+ - user: user@gmail.com
+  Senha: Admin123
+
+- visitante: user@gmail.com
+  Senha: Admin123
 
 ### PAGINA DE POSTS
 
