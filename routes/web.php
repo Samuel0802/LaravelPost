@@ -24,6 +24,7 @@ Route::middleware('auth')->group(function () {
 
     //PAGINA DE CRIAR POSTS
     Route::get('/posts/create', [MainController::class, 'createPost'])->name('post.create');
+    Route::post('/posts/create', [MainController::class, 'postStore'])->name('post.store');
     //FUNÇÃO DE EXCLUIR POSTS
     Route::get('/posts/delete/{id}', [MainController::class, 'deletePost'])->name('post.delete');
 });
