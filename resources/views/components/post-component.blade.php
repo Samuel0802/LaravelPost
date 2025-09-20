@@ -11,7 +11,7 @@
 
                                    <div>
                                      <span class="text-gray-500 me-3">Post criado:</span>
-                                    <span class="text-blue-600">{{ $post->created_at }}</span>
+                                    <span class="text-blue-600">{{ \Carbon\Carbon::parse($post->created_at)->format('d/m/Y H:i:s') }}</span>
                                    </div>
                             </div>
 
