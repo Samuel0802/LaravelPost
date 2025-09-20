@@ -40,7 +40,10 @@
             <x-post-component :post="$post" />
         @endforeach
 
-        <x-paginete-post :posts="$posts" />
+        @if($posts->total() > 0)
+           <x-paginete-post :posts="$posts" />
+        @endif
+
 
 
     </div>
