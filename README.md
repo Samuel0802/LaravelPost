@@ -58,7 +58,7 @@ Capturando e Validando IDs Encriptados
 
 Middleware
 
-Boostrap (Front-end)
+Tailwind CSS - Front End
 
 Rotas
 
@@ -72,7 +72,7 @@ Criando Query para paginação
 
 Lidando com Listagem de dados
 
-CRUD - Create, update, Delete.
+CRUD - Create, Delete.
 
  ```
 
@@ -93,3 +93,11 @@ CRUD - Create, update, Delete.
  - composer require lucascudo/laravel-pt-br-localization --dev
  - php artisan vendor:publish --tag=laravel-pt-br-localization
 
+
+### PAGINA DE POSTS
+
+![alt text](image.png)
+
+### PAGINA CRIANDO POST
+
+![alt text](image-1.png)

@@ -14,7 +14,7 @@ class MainController extends Controller
     {
 
         //obter todas as postagens e os dados do usuário que criou a postagem
-        $posts = Post::with('user')->get();
+        $posts = Post::with('user')->paginate(3);
         Log::info('Listando os Posts', ['user' =>  Auth::user()->id]);
 
         return view('dashboard', ['posts' => $posts]);
